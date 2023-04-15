@@ -1,0 +1,15 @@
+.person {
+    background-color: aquamarine;
+}
+
+a {
+    display: block;
+}
+
+#highlight > div {
+    background-color: red;
+}
+
+#highlight + a > div {
+    background-color: yellow;
+}
