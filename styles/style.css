@@ -13,3 +13,10 @@ a {
 #highlight + a > div {
     background-color: yellow;
 }
+
+.form-container { 
+    margin: 24px;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 24px;
+}

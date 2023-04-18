@@ -1,3 +1,5 @@
+const root = document.getElementById('root');
+
 const people = [{
     name: "Lilith",
     info: "Some random text",
@@ -18,12 +20,19 @@ const people = [{
     link: "pages/page3.html",
 }];
 
-for (let i = 0; i < people.length; i++) {
-    const person = people[i];
+function draw() {
+    for (let i = 0; i < people.length; i++) {
+        const person = people[i];
+        root.appendChild(drawPerson(person));
+    }
+}
 
+draw();
+
+function drawPerson(person) {
     const link = document.createElement('a');
     link.href = person.link;
-    if(person.isMyTurn){
+    if (person.isMyTurn) {
         link.id = "highlight";
     }
 
@@ -40,5 +49,5 @@ for (let i = 0; i < people.length; i++) {
     name.innerHTML = person.name;
     container.appendChild(name);
 
-    root.appendChild(link);
+    return link;
 }

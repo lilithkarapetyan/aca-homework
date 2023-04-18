@@ -10,10 +10,14 @@
 </head>
 
 <body>
-    <p>Your username should have at least 5 characters</p>
-    <input type="text" oninput="validate()" id="username"/>
+    <form class="form-container" onsubmit="return submitData()">
+        <input type="text" oninput="setData('name')" id="name" placeholder="name"/>
+        <input type="text" oninput="setData('image')" id="image" placeholder="image url"/>
+        <input type="text" oninput="setData('link')" id="link" placeholder="link"/>
+        <button type="submit">Create!</button>
+    </form>
+    <div id="root"></div>
     <script src="scripts/events.js"></script>
-    <script src="scripts/menu.js"></script>
     <script src="scripts/script.js"></script>
 </body>
 
